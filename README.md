@@ -37,9 +37,19 @@ Then open a new terminal.
 ./setup.sh --list       # show all Brewfiles
 ```
 
+## Update
+
+On a machine that's already set up:
+
+```bash
+dotup                              # pull the latest dotfiles and nvim config
+~/development/dotfiles/setup.sh    # only if a Brewfile changed
+```
+
+If you only changed `zshrc` or the nvim config, `dotup` is enough. Then open a new terminal.
+
 ## Notes
 
-- Run `dotup` to pull the latest dotfiles and nvim config. Run `./setup.sh` again if a Brewfile changed.
 - Put secrets and machine-only settings in `~/.zshrc.local`. It's loaded automatically and not saved in git.
 - Java may need adding to your PATH. See the note in `Brewfile.languages`.
 - To add a tool, add it to a Brewfile and run `./setup.sh` again.
