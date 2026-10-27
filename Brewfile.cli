@@ -1,0 +1,27 @@
+# Command line tooling
+brew "git"
+brew "neovim"
+brew "tree-sitter-cli"   # neovim treesitter parsers
+brew "fd"                # fast `find` alternative
+brew "unzip"
+brew "ripgrep"           # fast grep (`rg`)
+brew "fzf"               # fuzzy finder
+brew "gh"                # GitHub CLI
+brew "jq"                # JSON processor
+brew "lazygit"           # git terminal UI
+brew "tmux"
+brew "wget"
+brew "make"              # installed as `gmake` on macOS
+
+# Zsh plugins (sourced in ~/.zshrc)
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+
+# NOTE (zsh): the plugins only load once they're sourced. Add these to your ~/.zshrc:
+#   source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#   source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# zsh-syntax-highlighting should be the last plugin sourced.
+#
+# NOTE (fzf): keybindings (Ctrl-R history, Ctrl-T files, Alt-C cd) need this in ~/.zshrc,
+# placed before the zsh-syntax-highlighting line:
+#   source <(fzf --zsh)

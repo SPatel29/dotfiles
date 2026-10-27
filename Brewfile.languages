@@ -1,0 +1,9 @@
+# Programming languages
+brew "node"      # includes npm
+brew "python"    # latest Python 3 (python3, pip3)
+brew "openjdk"   # Java
+
+# NOTE (Java): Homebrew doesn't link openjdk into your PATH automatically,
+# so `java` might not be found after installing. Add this to your ~/.zshrc:
+#   export PATH="$(brew --prefix openjdk)/bin:$PATH"
+# On macOS you can run the symlink command shown in `brew info openjdk` instead.
