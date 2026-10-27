@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Links ~/.zshrc to the zshrc in this folder, installs Homebrew (if missing),
+# Links ~/.zshrc and ~/.tmux.conf to the files in this folder, installs Homebrew (if missing),
 # the packages from Brewfile.* in this folder, and clones the nvim config.
 #
 # Usage:
@@ -37,6 +37,7 @@ link_dotfile() {
 }
 
 link_dotfile zshrc "$HOME/.zshrc"
+link_dotfile tmux.conf "$HOME/.tmux.conf"
 
 # Install Homebrew if it isn't already available
 if ! command -v brew >/dev/null 2>&1; then
