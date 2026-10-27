@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Links ~/.zshrc to the zshrc in this folder, installs Homebrew (if missing),
-# and then the packages from Brewfile.* in this folder.
+# the packages from Brewfile.* in this folder, and clones the nvim config.
 #
 # Usage:
 #   ./setup.sh                 # install every Brewfile.*
@@ -80,5 +80,16 @@ for name in "${bundles[@]}"; do
   echo "==> Installing $name ($file)"
   brew bundle --file="$file"
 done
+
+# Neovim config (separate repo). Left alone if it already exists; update it with `git pull`.
+NVIM_CONFIG_REPO="https://github.com/SPatel29/nvim-config.git"
+NVIM_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/nvim"
+if [[ -e "$NVIM_CONFIG_DIR" ]]; then
+  echo "==> $NVIM_CONFIG_DIR already exists, skipping nvim config"
+else
+  echo "==> Cloning nvim config into $NVIM_CONFIG_DIR"
+  mkdir -p "$(dirname "$NVIM_CONFIG_DIR")"
+  git clone "$NVIM_CONFIG_REPO" "$NVIM_CONFIG_DIR"
+fi
 
 echo "==> Done."
