@@ -30,6 +30,14 @@ if command -v brew >/dev/null 2>&1; then
   command -v fzf >/dev/null 2>&1 && source <(fzf --zsh)
 fi
 
+# Pull the latest dotfiles and nvim config
+dotup() {
+  echo "==> dotfiles"
+  git -C "$DOTFILES" pull --ff-only
+  echo "==> nvim-config"
+  git -C "${XDG_CONFIG_HOME:-$HOME/.config}/nvim" pull --ff-only
+}
+
 # Machine-specific settings and secrets (not tracked in git)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
