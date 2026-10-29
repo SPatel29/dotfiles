@@ -16,6 +16,15 @@ export PATH="$HOME/.local/bin:$PATH"
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'   # case-insensitive
 
+# History: saved to a file and shared between open tabs (powers suggestions and Ctrl-R)
+HISTFILE=~/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
+setopt SHARE_HISTORY          # save each command right away; other tabs pick it up
+setopt HIST_IGNORE_ALL_DUPS   # keep only the latest copy of a repeated command
+setopt HIST_IGNORE_SPACE      # start a command with a space to keep it out of history
+setopt HIST_REDUCE_BLANKS
+
 # Prompt, ls colors, completion colors, plugin colors
 source "$DOTFILES/terminal-appearance.zsh"
 
