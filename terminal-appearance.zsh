@@ -5,12 +5,12 @@
 # Material Palenight, saved at the bottom of this file.
 
 # ---------------------------------------------------------------------------
-# Prompt:  sunny_patel@host development %
-#   %n@%m  user@host          -> cyan   (#71C6E7)
-#   %1~    current dir only   -> green  (#ABCF76)
+# Prompt:  sunny_patel ~/dotfiles %
+#   %n     user               -> cyan   (#71C6E7)
+#   %~     path from home (~) -> green  (#ABCF76)
 #   %%     prompt symbol      -> bold, default foreground (#A6ACCD)
 # ---------------------------------------------------------------------------
-PROMPT="%F{cyan}%n@%m%f %F{green}%1~%f %B%% %b"
+PROMPT="%F{cyan}%n%f %F{green}%~%f %B%% %b"
 
 # ---------------------------------------------------------------------------
 # ls colors (dircolors defaults)
