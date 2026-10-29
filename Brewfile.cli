@@ -25,3 +25,6 @@ brew "zsh-syntax-highlighting"
 # NOTE (fzf): keybindings (Ctrl-R history, Ctrl-T files, Alt-C cd) need this in ~/.zshrc,
 # placed before the zsh-syntax-highlighting line:
 #   source <(fzf --zsh)
+
+# Nerd Font for icons in neovim (file explorer, etc.). Select it in your terminal's font settings.
+cask "font-jetbrains-mono-nerd-font" if OS.mac?

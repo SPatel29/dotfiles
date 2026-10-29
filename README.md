@@ -14,11 +14,13 @@ My dev setup. One script installs my tools and sets up my terminal on macOS or L
 - ripgrep, fd, fzf, jq, lazygit
 - tmux, wget, make, unzip
 - zsh-autosuggestions, zsh-syntax-highlighting
+- JetBrains Mono Nerd Font (macOS only; needed for icons in the Neovim file explorer)
 
 **Config**
 - `zshrc`: shell setup, linked to `~/.zshrc`
 - `tmux.conf`: tmux setup and shortcuts, linked to `~/.tmux.conf`
 - `terminal-appearance.zsh`: prompt, colors, and the Material Palenight color scheme
+- `Material Palenight.itermcolors`: the same color scheme for iTerm2
 - Neovim config, cloned from [nvim-config](https://github.com/SPatel29/nvim-config) into `~/.config/nvim`
 
 ## Install
@@ -37,6 +39,12 @@ Then open a new terminal.
 ./setup.sh cli          # just Brewfile.cli
 ./setup.sh --list       # show all Brewfiles
 ```
+
+On macOS's built-in bash (3.2), name the Brewfiles: `./setup.sh cli languages`. Running it with no arguments fails there.
+
+**iTerm2 (one time, by hand):**
+1. Settings > Profiles > Colors > Color Presets > Import `Material Palenight.itermcolors`, then select it.
+2. Settings > Profiles > Text > Font: **JetBrainsMono Nerd Font**.
 
 ## Update
 

@@ -58,7 +58,9 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
 # Color scheme: Material Palenight (matches the Neovim `material` palenight theme).
 # Windows Terminal: paste into "schemes" in settings.json, then set
 # "colorScheme": "Material Palenight" on the Ubuntu profile.
-# Other terminals (iTerm2, Ghostty, ...): use the same hex values.
+# iTerm2: import "Material Palenight.itermcolors" from this folder
+#   (Settings > Profiles > Colors > Color Presets... > Import, then pick it from the same menu).
+# Other terminals (Ghostty, ...): use the same hex values.
 #
 # {
 #     "name": "Material Palenight",
