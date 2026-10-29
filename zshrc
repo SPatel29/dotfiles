@@ -20,7 +20,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'   # case-insensitive
 source "$DOTFILES/terminal-appearance.zsh"
 
 if command -v brew >/dev/null 2>&1; then
-  BREW_PREFIX="$(brew --prefix)"
+  BREW_PREFIX="${HOMEBREW_PREFIX:-$(brew --prefix)}"   # set by `brew shellenv` above; skips a slow brew call
 
   # Fish-style suggestions from history (accept with →)
   [[ -f "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] &&

@@ -54,6 +54,7 @@ If you only changed `zshrc` or the nvim config, `dotup` is enough. Then open a n
 - Put secrets and machine-only settings in `~/.zshrc.local`. It's loaded automatically and not saved in git.
 - Java may need adding to your PATH. See the note in `Brewfile.languages`.
 - To add a tool, add it to a Brewfile and run `./setup.sh` again.
+- Keep new terminals fast (about 0.5s). Check with `time zsh -l -i -c exit`. The usual slow spots are `eval "$(tool init)"` lines, nvm, and generating completions in `~/.zshrc.local` or `~/.zprofile`.
 
 ## tmux shortcuts
 
